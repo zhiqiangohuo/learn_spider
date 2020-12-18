@@ -1,0 +1,11 @@
+安装步骤  python3.6+  mysql
+
+1. pip install -r requirements.txt
+2. insert2mysql修改表名用户名和密码。自己创建表结构 数据类型默认全是text 属性名分别为 poiId,frontImg,title,avgScore,allCommentNum,address,avgPrice,dealList,hasAds,adsClickUrl,adsShowUrl
+3. 在目录下执行python meituan.py   或者用pycharm执行。
+4.代码中文件加载路径建议别乱改。
+4. 抓取保存Excel保存到当前目录（直接点保存即可)
+5. 数据分析图片默认保存在img目录下。共三张图片
+    1. 热力图表示所有属性的相关性。
+    2、散点图为用户评价和平均价格的关系
+    3、直方图表示评分的分布情况
