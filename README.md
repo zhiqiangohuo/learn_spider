@@ -3,4 +3,4 @@
     ![img](https://github.com/zhiqiangohuo/learn_spider/blob/master/img/meituanspider.png)
    
 - 马蜂窝（游记）爬虫（补充）
-- 起点 读者信息爬虫（待补充）
+- 起点爬虫
