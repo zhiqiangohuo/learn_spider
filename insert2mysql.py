@@ -1,7 +1,7 @@
 # 链接数据库
 
 import pymysql
-from pymysql import escape_string, escape_dict
+# from pymysql import escape_string, escape_dict
 
 
 # 执行sql语句
@@ -19,22 +19,23 @@ data = {'poiId': 1469630,
 data['dealList'] = str(data['dealList'])
 
 class Write2mysql():
-    def __init__(self,):
-        self.connect = pymysql.connect(host="192.168.3.17", user="root", password="12345678", db="qt_spider", charset="utf8")
-        self.cur = self.connect.cursor()
-        print("数据库连接成功")
-    def processitem(self,data):
-        try:
-
-            sql = "insert into meituan(poiId,frontImg,title,avgScore,allCommentNum,address,avgPrice,dealList,hasAds,adsClickUrl,adsShowUrl) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-
-            value = [v for k, v in data.items()]
-
-            print(value)
-            self.cur.execute(sql, tuple(value))
-            # 事物提交
-            self.connect.commit()
-            print("插入数据库成功")
-        except Exception as err:
-            print("sql语句执行错误", err)
-            self.connect.rollback()
+    # def __init__(self,):
+    #     self.connect = pymysql.connect(host="", user="root", password="12345678", db="qt_spider", charset="utf8")
+    #     self.cur = self.connect.cursor()
+    #     print("数据库连接成功")
+    # def processitem(self,data):
+    #     try:
+    #
+    #         sql = "insert into meituan(poiId,frontImg,title,avgScore,allCommentNum,address,avgPrice,dealList,hasAds,adsClickUrl,adsShowUrl) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+    #
+    #         value = [v for k, v in data.items()]
+    #
+    #         print(value)
+    #         self.cur.execute(sql, tuple(value))
+    #         # 事物提交
+    #         self.connect.commit()
+    #         print("插入数据库成功")
+    #     except Exception as err:
+    #         print("sql语句执行错误", err)
+    #         self.connect.rollback()
+    pass

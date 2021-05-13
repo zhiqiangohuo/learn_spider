@@ -284,17 +284,18 @@ class ChildWindow(QMainWindow, Ui_MainWindow):
         return data
 
     def savemysql(self):
-        # 保存内容到数据库
-        count = 0
-        self.textBrowser_3.append("正在保存到mysql，耐心等待")
-        for i,data in enumerate(self.alldata):
-            self.textBrowser_3.append("正在保存第{}条".format(i + 1))
-            data = self.del_item(data)
-            print(data)
-            self.Write2mysql.processitem(data)
-            self.pushButton_7.setEnabled(False)
-            count =i
-        self.textBrowser_3.append("数据全部保存到mysql,共{}条： ".format(count+1))
+        # # 保存内容到数据库
+        # count = 0
+        # self.textBrowser_3.append("正在保存到mysql，耐心等待")
+        # for i,data in enumerate(self.alldata):
+        #     self.textBrowser_3.append("正在保存第{}条".format(i + 1))
+        #     data = self.del_item(data)
+        #     print(data)
+        #     self.Write2mysql.processitem(data)
+        #     self.pushButton_7.setEnabled(False)
+        #     count =i
+        # self.textBrowser_3.append("数据全部保存到mysql,共{}条： ".format(count+1))
+        pass
     def showdata(self):
         # 显示数据分析结果
         import os
